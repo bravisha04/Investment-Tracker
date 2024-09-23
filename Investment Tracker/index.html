@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Portfolio Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Investment Portfolio Tracker</h1>
+        <div class="portfolio-value">
+            <h2>Total Portfolio Value: $<span id="totalValue">0</span></h2>
+        </div>
+        <button id="addInvestmentBtn">Add New Investment</button>
+        <form id="investmentForm" class="hidden">
+            <h3>Add New Investment</h3>
+            <label for="assetName">Asset Name:</label>
+            <input type="text" id="assetName" required>
+            <label for="amountInvested">Amount Invested:</label>
+            <input type="number" id="amountInvested" required>
+            <label for="currentValue">Current Value:</label>
+            <input type="number" id="currentValue" required>
+            <button id="submitInvestment">Add Investment</button>
+        </form>
+        <div id="investmentList">
+            <h3>Investment List:</h3>
+            <table id="investmentTable">
+                <thead>
+                    <tr>
+                        <th>Asset Name</th>
+                        <th>Invested</th>
+                        <th>Current</th>
+                        <th>% Change</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Investments will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+        <div id="portfolioChart">
+            <h3>Portfolio Distribution</h3>
+            <canvas id="chartCanvas" width="400" height="400" style="border: 1px solid black;"></canvas>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
